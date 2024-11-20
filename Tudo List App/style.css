@@ -1,0 +1,122 @@
+/* General Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  padding: 20px;
+  background: linear-gradient(to right, #2c3e50, #3498db);
+  color: white;
+}
+
+h1 {
+  margin-bottom: 30px;
+  font-size: 2.5rem;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+}
+
+.main-container {
+  width: 100%;
+  max-width: 520px;
+  margin: 0 auto;
+  min-height: 300px;
+  border: 1px solid #ccc;
+  border-radius: 25px;
+  padding: 20px;
+  background: linear-gradient(to right, #2c3e50, #3498db);
+  box-shadow: 0 0 25px rgba(255, 0, 0, 0.8);
+  overflow-y: auto;
+}
+
+/* Input Section */
+.input-section {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.input-section input {
+  padding: 9px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  flex: 1;
+  min-width: 120px;
+  box-shadow: 0 0 10px black;
+}
+
+.input-section .btn {
+  padding: 12px 30px;
+  border: none;
+  border-radius: 5px;
+  background-color: green;
+  color: white;
+  cursor: pointer;
+  box-shadow: 0 0 10px black;
+}
+
+/* Task Display Section */
+.todo-container {
+  margin-top: 10px;
+}
+
+.todo-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: white;
+  box-shadow: 0 0 10px black;
+}
+
+.todo-item span {
+  font-size: 16px;
+  flex: 1;
+  text-align: left;
+  color: black;
+  padding-left: 5px;
+}
+
+.todo-item .delete-btn {
+  padding: 12px 20px; /* Match the Add button */
+  border: none;
+  border-radius: 5px;
+  background-color: red;
+  color: white;
+  cursor: pointer;
+  box-shadow: 0 0 10px black;
+}
+
+/* Responsive Design */
+@media (max-width: 540px) {
+  .input-section {
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 420px) {
+  .input-section .btn {
+   width: 100%;
+  }
+}
+
+@media (max-width: 320px) {
+  .todo-container .delete-btn{
+    padding: 12px 70px;
+    margin-top: 5px;
+    margin-bottom: 2px;
+  }
+  .todo-container .todo-item{
+    flex-direction: column;
+  }
+}
